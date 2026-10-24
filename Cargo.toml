@@ -6,7 +6,7 @@ description = "A tiny command-line shell with TOML configuration"
 license = "MIT"
 
 [dependencies]
-toml = "0.8"
+toml = "1.1"
 
 [profile.release]
 lto = true
