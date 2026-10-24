@@ -23,11 +23,55 @@
 
 Нужен установленный [Rust](https://www.rust-lang.org/tools/install).
 
+### Быстрый запуск без установки
+
+```sh
+git clone https://github.com/aydevix/aysh.git
+cd aysh
+cargo run --release
+```
+
+### Полная установка в систему
+
+Вариант 1 — в `~/.cargo/bin` (обычно уже есть в `PATH`):
+
+```sh
+cargo install --git https://github.com/aydevix/aysh
+```
+
+Вариант 2 — системно, для всех пользователей (нужны права администратора):
+
 ```sh
 git clone https://github.com/aydevix/aysh.git
 cd aysh
 cargo build --release
-./target/release/aysh
+sudo install -m 755 target/release/aysh /usr/local/bin/aysh
+```
+
+Проверка:
+
+```sh
+which aysh
+aysh
+```
+
+### Использовать как основную оболочку (необязательно)
+
+Чтобы `aysh` можно было выбрать в качестве оболочки входа, добавьте его путь в `/etc/shells` и смените оболочку:
+
+```sh
+echo /usr/local/bin/aysh | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/aysh
+```
+
+> `aysh` не читает `~/.profile`, `~/.bashrc` и подобные файлы. Для входа в систему используйте его осторожно и держите под рукой другой терминал или загрузочную оболочку, чтобы в случае проблем можно было откатить `chsh`.
+
+### Удаление
+
+```sh
+cargo uninstall aysh                 # если ставили через cargo install
+sudo rm /usr/local/bin/aysh          # если ставили вручную
+rm -rf ~/.config/aysh                # необязательно: удалить конфигурацию
 ```
 
 ## Конфигурация
