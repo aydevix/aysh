@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 731 719" role="img" aria-labelledby="title">
+  <title id="title">aysh terminal logo</title>
+  <rect width="731" height="719" fill="#000"/>
+  <g fill="#fff">
+    <!-- Terminal window -->
+    <path fill-rule="evenodd" d="M360 0h300a60 60 0 0 1 60 60v300a60 60 0 0 1-60 60H360a60 60 0 0 1-60-60V60a60 60 0 0 1 60-60Zm2 61v297h297V61H362Z"/>
+    <!-- Shell prompt chevron -->
+    <path d="M450 141 561 205a30 30 0 0 1 0 52l-111 64a30 30 0 1 1-30-52l66-38-66-38a30 30 0 1 1 30-52Z"/>
+    <!-- Lower prompt / cursor motif -->
+    <path fill-rule="evenodd" d="M60 277h101a60 60 0 0 1 60 60v101a60 60 0 0 0 60 60h101a60 60 0 0 1 60 60v101a60 60 0 0 1-60 60H60a60 60 0 0 1-60-60V337a60 60 0 0 1 60-60Zm1 61v320h320V558H281a121 121 0 0 1-121-121V338H61Z"/>
+  </g>
+</svg>
